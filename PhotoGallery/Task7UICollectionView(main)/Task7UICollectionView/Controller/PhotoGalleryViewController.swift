@@ -12,7 +12,7 @@ final class PhotoGalleryViewController: UIViewController, UINavigationController
     // MARK: - Configuration
     
     private enum Configuration {
-        static let numberOfCellsPerRow: CGFloat = 2
+        static let numberOfCellsPerRow: CGFloat = 1
         static let minimumLineSpacing: CGFloat = 4
         static let minimumInteritemSpacing: CGFloat = 4
         static let sectionInset = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
@@ -247,3 +247,4 @@ extension PhotoGalleryViewController: UIImagePickerControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
 }
+
