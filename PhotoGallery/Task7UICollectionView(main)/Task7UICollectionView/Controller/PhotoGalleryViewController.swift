@@ -12,7 +12,7 @@ final class PhotoGalleryViewController: UIViewController, UINavigationController
     // MARK: - Configuration
     
     private enum Configuration {
-        static let numberOfCellsPerRow: CGFloat = 3
+        static let numberOfCellsPerRow: CGFloat = 2
         static let minimumLineSpacing: CGFloat = 4
         static let minimumInteritemSpacing: CGFloat = 4
         static let sectionInset = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
