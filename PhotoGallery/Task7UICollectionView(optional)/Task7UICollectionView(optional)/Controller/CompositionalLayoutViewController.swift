@@ -95,17 +95,17 @@ class CompositionalLayoutViewController: UIViewController {
           heightDimension: .fractionalWidth(4/9)),
         subitems: [mainItem, trailingGroup])
 
-      let singletItem = NSCollectionLayoutItem(
+      let doubletItem = NSCollectionLayoutItem(
         layoutSize: NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1.0),
+          widthDimension: .fractionalWidth(0.5),
           heightDimension: .fractionalHeight(1.0)))
-      singletItem.contentInsets = Configuration.contentInsets
+      doubletItem.contentInsets = Configuration.contentInsets
 
-      let singletGroup = NSCollectionLayoutGroup.horizontal(
+      let doubletGroup = NSCollectionLayoutGroup.horizontal(
         layoutSize: NSCollectionLayoutSize(
           widthDimension: .fractionalWidth(1.0),
           heightDimension: .fractionalWidth(1.0)),
-        subitems: [singletItem])
+        subitems: [doubletItem, doubletItem])
 
       let mainWithPairReversedGroup = NSCollectionLayoutGroup.horizontal(
         layoutSize: NSCollectionLayoutSize(
@@ -117,7 +117,7 @@ class CompositionalLayoutViewController: UIViewController {
         layoutSize: NSCollectionLayoutSize(
           widthDimension: .fractionalWidth(1.0),
           heightDimension: .fractionalWidth(16/9)),
-        subitems: [fullPhotoItem, mainWithPairGroup, singletGroup, mainWithPairReversedGroup])
+        subitems: [fullPhotoItem, mainWithPairGroup, doubletGroup, mainWithPairReversedGroup])
 
       let section = NSCollectionLayoutSection(group: nestedGroup)
       let layout = UICollectionViewCompositionalLayout(section: section)
@@ -149,5 +149,6 @@ extension CompositionalLayoutViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
 
 
